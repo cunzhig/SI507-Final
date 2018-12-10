@@ -438,11 +438,16 @@ if __name__=='__main__':
                             for p in yelp_places:
                                 print("{}. {}".format(counter,p))
                                 counter += 1
-
+                            if len(yelp_places)==0:
+                                print("No result is found.")
+                                break
                             n=input("Read comments for (index of the results): ")
-                            reviews=scrape_review(yelp_places[int(n)-1].url)
-                            for r in reviews:
-                                print(r)
+                            try:
+                                reviews=scrape_review(yelp_places[int(n)-1].url)
+                                for r in reviews:
+                                    print(r)
+                            except:
+                                print("Invalid Input")
                         elif line3=='4':
                             break
                         else:
@@ -483,17 +488,17 @@ if __name__=='__main__':
                                 elif line4 == '4':
                                     break
                                 else:
-                                    print("\nInvalid Input!4")
+                                    print("\nInvalid Input!")
                                 
                             break
                         else:
-                            print("\nInvalid Input!3")
+                            print("\nInvalid Input!")
                     break
                 else:
                     # Invalid Input
-                    print("\nInvalid Input!2")
+                    print("\nInvalid Input!")
         elif line1 == '2':
             print('\nBYE!')
             break
         else:
-            print("\nInvalid Input!3")
+            print("\nInvalid Input!")
