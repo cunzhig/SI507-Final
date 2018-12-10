@@ -1,12 +1,12 @@
 # SI507-Final
 
-## Data Source:
+## Data Source
   * Yelp Fushion API (business search): https://www.yelp.com/developers/documentation/v3/business_search
   
   * tacos.csv (Restaurant that sell burritos and tacos in the U.S.): https://data.world/datafiniti/restaurants-burritos-and-tacos
 
 
-## Code Structure:
+## Code Structure
 ### Create tacos restaurants database
      
     create_tacos_db() - Create tacos.sqlite
@@ -22,7 +22,7 @@
      db_search(city) - Pass city input to sqlite to search results from db
  
  
-## User guide:
+## User guide
 run py file: final_project.py
 
 >Search  
@@ -39,5 +39,3 @@ run py file: final_project.py
 >>>>c. Compare with Yelp results on plotly map  
 
 >Exit
-   
-   
