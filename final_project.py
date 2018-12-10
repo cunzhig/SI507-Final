@@ -403,33 +403,11 @@ def output_csv(results,flag):
 
 # -----------------------------------------------#
 
-
-
-
-# data1 = yelp_search('pizza','Ann Arbor')['businesses']
-# data2= yelp_search('burger','Ann Arbor')['businesses']
-# data3 = yelp_search('tacos','Ann Arbor')['businesses']
-
-# output_csv(data3,True)
-
-
-# places=[]
-# for data in data3:
-#     name=data['name']
-#     lat=data['coordinates']['latitude']
-#     lon=data['coordinates']['longitude']
-#     url=data['url']
-#     places.append(Place(name,lat,lon,url))
-
-# plot_results(places)
-# plot_compare(places,db_search("Ann Arbor"))
-
-
 if __name__=='__main__':
     # Create DB #
-    print('Creating DB')
-    # create_tacos_db()
-    # populate_tacos_db()
+    print('Creating DB...')
+    create_tacos_db()
+    populate_tacos_db()
     while True:
         line1 = input("\n1. Search \n2. Exit \nPlease input your command (1 or 2): ")
         if line1 == '1':
